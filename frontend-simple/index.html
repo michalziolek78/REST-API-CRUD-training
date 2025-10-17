@@ -1,0 +1,71 @@
+
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>API Kowboja</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>REST inAPIs  Test-ys good ;)</h1>
+      <div class="env">
+        <label>API Base URL:
+          <input id="baseUrl" value="http://127.0.0.1:8000" />
+        </label>
+        <button id="useFastAPI">FastAPI</button>
+        <button id="useJsonServer">json-server</button>
+      </div>
+      <nav>
+        <button data-tab="users">Users</button>
+        <button data-tab="products">Products</button>
+        <button data-tab="posts">Posts</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="users" class="tab active">
+        <h2>Users</h2>
+        <form id="userForm">
+          <input name="name" placeholder="Name" required />
+          <input name="email" placeholder="Email" required />
+          <select name="role">
+            <option value="user">user</option>
+            <option value="admin">admin</option>
+          </select>
+          <button type="submit">Create</button>
+        </form>
+        <div class="list" id="usersList"></div>
+      </section>
+
+      <section id="products" class="tab">
+        <h2>Products</h2>
+        <form id="productForm">
+          <input name="name" placeholder="Name" required />
+          <input name="price" type="number" step="0.01" placeholder="Price" required />
+          <input name="stock" type="number" placeholder="Stock" value="0" required />
+          <button type="submit">Create</button>
+        </form>
+        <div class="list" id="productsList"></div>
+      </section>
+
+      <section id="posts" class="tab">
+        <h2>Posts</h2>
+        <form id="postForm">
+          <input name="user_id" type="number" placeholder="user_id" required />
+          <input name="title" placeholder="Title" required />
+          <input name="body" placeholder="Body" required />
+          <button type="submit">Create</button>
+        </form>
+        <div class="list" id="postsList"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Tip: FastAPI → <code>/api/v1/*</code>, json-server → <code>/api/v1/*</code>. Wymagany włączony serwer backend.</p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

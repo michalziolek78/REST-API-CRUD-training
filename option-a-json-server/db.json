@@ -1,0 +1,76 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Jan Kowalski",
+      "email": "jan.kowalski@example.com",
+      "role": "user"
+    },
+    {
+      "id": 2,
+      "name": "Anna Nowak",
+      "email": "anna.nowak@example.com",
+      "role": "admin"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Keyboard",
+      "price": 129.99,
+      "stock": 50
+    },
+    {
+      "id": 2,
+      "name": "Mouse",
+      "price": 79.9,
+      "stock": 120
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "userId": 1,
+      "items": [
+        {
+          "productId": 1,
+          "qty": 1
+        }
+      ],
+      "status": "processing"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "items": [
+        {
+          "productId": 2,
+          "qty": 2
+        }
+      ],
+      "status": "delivered"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "Hello API",
+      "body": "To jest przykładowy post."
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "title": "API Tips",
+      "body": "Kilka porad dotyczących API."
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "postId": 1,
+      "author": "Anon",
+      "text": "Super!"
+    }
+  ]
+}
